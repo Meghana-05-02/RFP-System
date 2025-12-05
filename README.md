@@ -312,19 +312,6 @@ npm install
 - Verify vendor email matches database
 - Check email filters in Gmail
 
-##  Environment Variables Reference
-
-| Variable              | Required | Description           | Example               |
-| --------------------- | -------- | --------------------- | --------------------- |
-| `GEMINI_API_KEY`      | Yes      | Google Gemini API key | `AIzaSy...`           |
-| `EMAIL_HOST`          | Yes      | IMAP server hostname  | `imap.gmail.com`      |
-| `EMAIL_HOST_USER`     | Yes      | Email address         | `user@gmail.com`      |
-| `EMAIL_HOST_PASSWORD` | Yes      | App password          | `abcd efgh ijkl mnop` |
-| `DEBUG`               | No       | Django debug mode     | `True` or `False`     |
-| `SECRET_KEY`          | Yes      | Django secret key     | Random string         |
-| `ALLOWED_HOSTS`       | No       | Allowed hosts         | `localhost,127.0.0.1` |
-
-
 
 ##  Acknowledgments
 
