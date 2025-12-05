@@ -86,4 +86,10 @@ coverage.xml
 .cache/
 SYSTEM_ARCHITECTURE.md
 
+# Development scripts
+backend/check_setup.py
+backend/create_proposal_manual.py
+backend/add_vendor.py
+backend/test_email_send.py
+
 
