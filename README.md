@@ -80,29 +80,11 @@ EMAIL_HOST_USER=your_email@gmail.com
 EMAIL_HOST_PASSWORD=your_app_password_here
 ```
 
-**Important Notes:**
-
-- Get your Gemini API key from: https://makersuite.google.com/app/apikey
-- For Gmail, use an App Password (not your regular password): https://support.google.com/accounts/answer/185833
-- Generate a secure Django SECRET_KEY or use: `python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"`
-
 #### Run Database Migrations
 
 ```bash
 python manage.py migrate
 ```
-
-#### Seed Sample Data (Optional)
-
-```bash
-python manage.py seed_data
-```
-
-This creates:
-
-- 3 sample vendors (Dell, HP, Lenovo)
-- 1 sample RFP in Draft status
-- Multiple RFP items
 
 ### 3. Frontend Setup
 
@@ -245,73 +227,7 @@ The system will:
 - Click "Ask AI for Recommendation"
 - Gemini analyzes all proposals and provides expert recommendation
 
-##  Testing
-
-### Test API Endpoints
-
-```bash
-cd backend
-python test_comparison.py
-python test_ai_recommendation.py
-```
-
-##  Security Notes
-
-- Never commit `.env` file to version control
-- Use App Passwords for Gmail (not your main password)
-- Rotate API keys regularly
-- Enable 2FA on your Google account
-- Keep `DEBUG=False` in production
-
-##  Troubleshooting
-
-### Backend Issues
-
-**Port 8000 already in use:**
-
-```bash
-# Kill existing Django processes
-Stop-Process -Name python -Force
-```
-
-**Database errors:**
-
-```bash
-# Reset migrations
-python manage.py migrate --run-syncdb
-```
-
-### Frontend Issues
-
-**Port 3000 already in use:**
-
-```bash
-# Kill existing Node processes or use different port
-set PORT=3001 && npm start
-```
-
-**Module not found:**
-
-```bash
-# Reinstall dependencies
-rm -rf node_modules package-lock.json
-npm install
-```
-
-### Email Issues
-
-**Can't connect to Gmail:**
-
-- Enable IMAP in Gmail settings
-- Use App Password instead of regular password
-- Check firewall settings
-
-**No emails found:**
-
-- Ensure email subject contains "RFP #{id}"
-- Verify vendor email matches database
-- Check email filters in Gmail
-
+``
 
 ##  Acknowledgments
 
